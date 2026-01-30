@@ -6,11 +6,11 @@ Implementation of three classical numerical methods for computing the value of �
 
 This project implements three historical formulas for calculating π:
 
-| Method | Year | Formula Type |
-|--------|------|--------------|
-| Leibniz | 1674 | Alternating series |
-| Wallis | 1655 | Infinite product |
-| Viète | 1593 | Nested square roots |
+| Method | Formula Type |
+|--------|--------------|
+| Leibniz | Alternating series |
+| Wallis | Infinite product |
+| Viète | Nested square roots |
 
 Each method is implemented in two versions:
 - **Recursive**: Classical recursion (stack grows linearly)
@@ -54,27 +54,6 @@ elixirc pi_computation_methods.ex
 ```elixir
 iex> c("pi_computation_methods.ex")
 [PiComputationMethods]
-
-# Leibniz method
-iex> PiComputationMethods.leibniz_recursive_pi(1000)
-3.1425916543395442
-
-iex> PiComputationMethods.leibniz_iterative_tail_recursive_pi(1000)
-3.1425916543395442
-
-# Wallis method
-iex> PiComputationMethods.wallis_recursive_pi(1000)
-3.140807746030402
-
-iex> PiComputationMethods.wallis_iterative_tail_recursive_pi(1000)
-3.140807746030402
-
-# Viète method
-iex> PiComputationMethods.viete_recursive_pi(30)
-3.141592653589793
-
-iex> PiComputationMethods.viete_iterative_tail_recursive_pi(30)
-3.141592653589793
 ```
 
 ### Running Benchmark
